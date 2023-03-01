@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BCQP Form</title>
+<link href="css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<section class="main-log">
+   <div class="container">
+      <img src="images/logo.png">
+   </div>
+</section>
+<section class="date-form">
+   <div class="container">
+      <h1>DOCUMENTATION REQUIRED BY BCQP</h1>
+      <form action="/action_page.php" class="day-fm">
+         <input type="date" id="days" name="days">
+      </form>
+   </div>
+</section>
+<section class="main-form">
+   <div class="container">
+   <div class="inner-fm">
+   
+      <!-- ONE SECTION ONE SECTION -->
+      <form action="/action_page.php" class="form">
+         <div class="form-title">
+            <img src="images/1.svg">
+            <h3>Contact</h3>
+         </div>
+         <div class="two-one">
+            <input type="text" id="fname" name="fname" placeholder="Name" required>
+            <input type="number" id="number" name="number" placeholder="Phone" required>
+         </div>
+         <input type="text" id="projet" name="projet" placeholder="Project Site Address" required>
+		 
+		 
+         <!-- TWO SECTION TWO SECTION -->
+         <div class="form-title">
+            <img src="images/2.svg">
+            <h3>Registered Owner Info:</h3>
+         </div>
+         <input type="text" id="owner" name="owner" placeholder="Registered Owner Name(s)">
+         <input type="text" id="civic" name="civic" placeholder="Owner's Civic Address">
+         <div class="two-one">
+            <input type="number" id="tele" name="tele" placeholder="Telephone number(s)">
+            <input type="email" id="email" name="email" placeholder="Email address">
+         </div>
+         <input type="text" id="license" name="license" placeholder="Business License number" class="spc-no">
+         <p>(if owner is incorporated)</p>
+		 
+		 
+         <!-- THREE SECTION THREE SECTION -->
+         <div class="form-title">
+            <img src="images/3.svg">
+            <h3>Consultant Documentation:</h3>
+         </div>
+		 <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+         <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+	 <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+         <input type="text" id="ACM" name="ACM" placeholder="Estimated quantity of all ACM / asbestos materials">
+		 
+		 
+         <!-- FOUR SECTION FOUR SECTION -->
+         <div class="form-title">
+            <img src="images/4.svg">
+            <h3>Site Considerations:</h3>
+         </div>
+         <div class="two-one">
+            <input type="text" id="access" name="access" placeholder="Restrict access - Prevent unauthorized entry">
+            <input type="text" id="guardrails" name="guardrails" placeholder="Install guardrails at all unprotected edges">
+         </div>
+         <input type="text" id="provide" name="provide" placeholder="Please provide means of access" class="spc-no">
+         <p>(location of key or lock-box code)</p>
+		 
+		 
+         <!-- FIVE SECTION FIVE SECTION -->
+         <div class="form-title">
+            <img src="images/5.svg">
+            <h3>Contractor Documentation:</h3>
+         </div>
+		  <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+	 <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+	 <div class="file-upload-wrapper space-in" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="">
+    </div>
+	<p style="margin-bottom: 25px;">(required for High Risk projects)</p>
+         <div class="two-one">
+            <input type="text" id="samples" name="samples" placeholder="Name of person collecting Air samples">
+            <input type="text" id="Manifest" name="Manifest" placeholder="Asbestos Waste Manifest">
+         </div>
+		 <div class="file-upload-wrapper" data-text="Select your file!">
+      <input name="file-upload-field" type="file" class="file-upload-field" value="" placeholder="fvdef">
+    </div>
+         <input type="text" id="COV" name="COV" placeholder="COV Business License number(s)">
+         <input type="submit" value="SUBMIT">
+      </form>
+   </div>
+</section>
+
+<script>
+$("form").on("change", ".file-upload-field", function(){ 
+    $(this).parent(".file-upload-wrapper").attr("data-text",         $(this).val().replace(/.*(\/|\\)/, '') );
+});
+</script>
+
+
+</body>
+</html>
